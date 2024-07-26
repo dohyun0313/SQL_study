@@ -1,0 +1,21 @@
+//뷰는 실제 데이터를 가지고 있지 않으며 진짜 테이블에 링크된 개념이다. 예를 들면 컴퓨터에서 바로가기 창과 같은 것
+
+
+CREATE VIEW member_view
+AS
+	SELECT * FROM member;
+    
+SELECT * FROM member_view;
+
+//스토어드 프로시저는 여러 개의 sql문을 하나로 묶어서 편리하게 사용가능
+
+DELIMITER //
+
+CREATE PROCEDURE myProc()
+BEGIN
+    SELECT * FROM member WHERE member_name = ' ';
+    SELECT * FROM product WHERE product_name = ' ';
+END //
+DELIMITER;
+
+CALL myProc;
