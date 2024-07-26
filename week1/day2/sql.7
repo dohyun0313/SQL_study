@@ -1,0 +1,27 @@
+SELECT의 기본형식
+
+SELECT 열 이름
+  FROM 테이블 이름
+  WHERE 조건식
+  GRUOP BY 열 이름
+  HAVING 조건식
+  ORDER BY 열 이름
+  LIMIT 숫자
+
+- 기본 값은 ASC 오름차순을 의미하고, DESC은 내림차순을 의미함.
+
+- LIMIT : 출력의 개수를 제한.
+
+- DISTINCT : 중복된 결과를 제거
+
+- GROUP BY 절 : 그룹을 묶어주는 역활을 하고, 집계 함수는 주로 GROUP BY 절과 함께 쓰이며 데이터를 그룹화 해주는 기능을 한다.
+
+- 집계 함수
+SUM() : 합계를 구한다.
+AVG() : 평균을 구한다.
+MIN() : 최솟값을 구한다.
+MAX() : 최대값을 구한다.
+COUNT() : 행의 개수를 센다.
+COUNT(DISTINCT) : 행의 개수를 센다.(중복은 1개만 인정)
+
+- HAVING 절 : WHERE 대신에 사용되는 것으로 집계 함수와 관련된 조건을 제한하며, GROUP BY 다음에 나온다.
